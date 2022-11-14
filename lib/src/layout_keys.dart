@@ -6,6 +6,7 @@ abstract class VirtualKeyboardLayoutKeys {
 
   List<List> get defaultEnglishLayout => _defaultEnglishLayout;
   List<List> get defaultArabicLayout => _defaultArabicLayout;
+  List<List> get defaultHebrewLayout => _defaultHebrewLayout;
 
   List<List> get activeLayout => getLanguage(activeIndex);
   int getLanguagesCount();
@@ -31,6 +32,8 @@ class VirtualKeyboardDefaultLayoutKeys extends VirtualKeyboardLayoutKeys {
         return _defaultEnglishLayout;
       case VirtualKeyboardDefaultLayouts.Arabic:
         return _defaultArabicLayout;
+      case VirtualKeyboardDefaultLayouts.Hebrew:
+        return _defaultHebrewLayout;
       default:
     }
     return _defaultEnglishLayout;
@@ -173,6 +176,74 @@ const List<List> _defaultArabicLayout = [
     VirtualKeyboardKeyAction.Space,
     '-',
     '.',
+    '_',
+  ]
+];
+
+const List<List> _defaultHebrewLayout = [
+  // Row 1
+  const [
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '0',
+  ],
+  // Row 2
+  const [
+    '/',
+    '\'',
+    'ק',
+    'ר',
+    'א',
+    'ט',
+    'ו',
+    'ן',
+    'ם',
+    'פ',
+    VirtualKeyboardKeyAction.Backspace
+  ],
+  // Row 3
+  const [
+    'ש',
+    'ד',
+    'ג',
+    'כ',
+    'ע',
+    'י',
+    'ח',
+    'ל',
+    'ך',
+    ';',
+    '\'',
+    VirtualKeyboardKeyAction.Return
+  ],
+  // Row 4
+  const [
+    VirtualKeyboardKeyAction.Shift,
+    'ז',
+    'ס',
+    'ב',
+    'ה',
+    'נ',
+    'מ',
+    'צ',
+    ',',
+    '.',
+    '/',
+    VirtualKeyboardKeyAction.Shift
+  ],
+  // Row 5
+  const [
+    VirtualKeyboardKeyAction.SwithLanguage,
+    '@',
+    VirtualKeyboardKeyAction.Space,
+    '&',
     '_',
   ]
 ];

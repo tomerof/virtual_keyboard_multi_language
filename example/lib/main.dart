@@ -78,17 +78,18 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Container(),
             ),
             Container(
-              color: Colors.deepPurple,
+              color: Colors.white,
               child: VirtualKeyboard(
                   height: 300,
                   //width: 500,
-                  textColor: Colors.white,
+                  textColor: Colors.black,
                   textController: _controllerText,
                   //customLayoutKeys: _customLayoutKeys,
                   defaultLayouts: [
-                    VirtualKeyboardDefaultLayouts.Arabic,
+                    VirtualKeyboardDefaultLayouts.Hebrew,
                     VirtualKeyboardDefaultLayouts.English
                   ],
+                  fontSize: 28,
                   //reverseLayout :true,
                   type: isNumericMode
                       ? VirtualKeyboardType.Numeric
